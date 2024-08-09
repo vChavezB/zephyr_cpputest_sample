@@ -14,5 +14,5 @@ TEST_GROUP(my_test_group) {
 };
 
 
-TEST(my_test_groupt, test_1) {	
+TEST(my_test_group, test_1) {	
 }
