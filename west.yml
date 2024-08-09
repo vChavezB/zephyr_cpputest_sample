@@ -1,0 +1,18 @@
+manifest:
+
+  remotes:
+    - name: vchavezb
+      url-base: https://github.com/vchavezb
+
+  projects:
+    - name: zephyr
+      remote: vchavezb
+      # Use custom branch with support of cpputest
+      revision: twister_cpputest
+      path: zephyr
+      clone-depth: 1
+      import:
+        # for some reason if no modules
+        # are included zephyr will not build
+        name-allowlist:
+          - zcbor

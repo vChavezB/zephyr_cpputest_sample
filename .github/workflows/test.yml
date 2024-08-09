@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Initialize
         run: |
-          west init
+          west init -l .
           west update -o=--depth=1 -n
       - name: Run tests
         run: |
