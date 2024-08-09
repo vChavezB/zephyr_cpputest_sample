@@ -21,6 +21,7 @@ jobs:
         run: |
           west init -l .
           west update -o=--depth=1 -n
+          ls
       - name: Run tests
         run: |
           ./zephyr/scripts/twister -vvv -T ./
