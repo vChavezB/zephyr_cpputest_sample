@@ -23,5 +23,5 @@ jobs:
           west update -o=--depth=1 -n
       - name: Run tests
         run: |
-          ./zephyr/scripts/twister -vvv -T ./
+          ./../zephyr/scripts/twister -vvv -T ./
 
