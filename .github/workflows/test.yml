@@ -10,6 +10,7 @@ on:
 jobs:
   test:
     container: ghcr.io/zephyrproject-rtos/ci:v0.26.13
+    runs-on: ubuntu-22.04
     env:
       CMAKE_PREFIX_PATH: /opt/toolchains
       BOARD: cannext
