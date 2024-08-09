@@ -1,0 +1,5 @@
+tests:
+  integration.trailer_detect:
+    platform_allow:
+    - native_posix/native/64
+    harness: "cpputest"

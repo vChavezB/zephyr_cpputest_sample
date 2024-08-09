@@ -1,0 +1,26 @@
+# Copyright (c) 2024, Victor Chavez (vchavezb@protonmail.com)
+# SPDX-License-Identifier: Apache-2.0
+
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    container: ghcr.io/zephyrproject-rtos/ci:v0.26.13
+    env:
+      CMAKE_PREFIX_PATH: /opt/toolchains
+      BOARD: cannext
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Initialize
+        run: |
+          west init
+          west update -o=--depth=1 -n
+      - name: Run tests
+        run: |
+          ./zephyr/scripts/twister -vvv -T ./
+
