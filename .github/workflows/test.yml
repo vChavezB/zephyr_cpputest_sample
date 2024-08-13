@@ -24,6 +24,6 @@ jobs:
       - name: Run tests
         run: |
           ./../zephyr/scripts/twister -vvv -T ./ || true
-      - name: dbg build:
+      - name: dbg build
         run: cat /__w/zephyr_cpputest_sample/zephyr_cpputest_sample/twister-out/native_posix_native_64/my_tests.my_test_group/build.log
 
